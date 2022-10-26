@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'core',
     # Django Rest Framework
     'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
