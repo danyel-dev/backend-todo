@@ -1,5 +1,3 @@
-from dataclasses import fields
-from pyexpat import model
 from rest_framework import serializers
 from .models import List, Item
 
@@ -7,7 +5,7 @@ from .models import List, Item
 class ItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = Item
-        fields = ['name', 'List', 'done', 'url']
+        fields = ['id', 'name', 'done', 'url']
 
 
 class ListSerializer(serializers.ModelSerializer):
@@ -15,6 +13,6 @@ class ListSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = List
-        fields = ['owner', 'name', 'url', 'item_set']
+        fields = ['id', 'owner', 'name', 'url', 'item_set']
 
     # owner = serializers.StringRelatedField()
