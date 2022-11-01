@@ -14,6 +14,7 @@ class ListViewset(viewsets.ModelViewSet):
         user = self.request.user
         return List.objects.filter(owner=user)
 
+
 class ItemViewset(viewsets.ModelViewSet):
     queryset = Item.objects.all()
     serializer_class = ItemSerializer
