@@ -7,8 +7,8 @@ from rest_framework import permissions, authentication
 class ListViewSet(viewsets.ModelViewSet):
     queryset = List.objects.all()
     serializer_class = ListSerializer
-    permission_classes = [permissions.IsAuthenticated]
-    authentication_classes = [authentication.TokenAuthentication, authentication.SessionAuthentication]
+    # permission_classes = [permissions.IsAuthenticated]
+    # authentication_classes = [authentication.TokenAuthentication, authentication.SessionAuthentication]
 
 
 class ItemViewSet(viewsets.ModelViewSet):
