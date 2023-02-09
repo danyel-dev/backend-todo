@@ -16,5 +16,5 @@ router.register(r'items', ItemViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
-    path('api-token-auth/', views.obtain_auth_token, name="api-tokn-auth")
+    path('api-token-auth/', views.obtain_auth_token, name="api-tokn-auth"),
 ]
